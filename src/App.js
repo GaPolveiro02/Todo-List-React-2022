@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Card } from "./components/Card"
 
 export function App() {
   const [todo, setTodo] = useState('');
@@ -21,7 +22,7 @@ export function App() {
       ></input>
       <button onClick={handleAddTodo}>Add</button>
 
-      {todoList.map(todo => <div>{todo.name}</div>)}
+      {todoList.map(todo => <Card name={todo.name}/>)}
     </div>
   );
 }

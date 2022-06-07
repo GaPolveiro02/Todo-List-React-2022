@@ -1,9 +1,10 @@
 export function Card(props) {
-    
-    function check() {
-        const card = document.querySelector(".card")
+    const check = (e) => {
+        e.nativeEvent.path[2].className = "card check"
+    }
 
-        card.classList = "card check"
+    const deleteTodo = (e) => {
+        e.nativeEvent.path[2].remove()
     }
 
     return( 
@@ -12,12 +13,12 @@ export function Card(props) {
                 <p>{props.name}</p>
             </div>
             <div className="actions">
-                <a href="#" className="check" onClick={check}>
-                    Marcar como feita
-                </a>
-                <a href="#" className="delete">
-                    Excluir
-                </a>
+                <button href="#" className="check" onClick={check}>
+                    Check
+                </button>
+                <button href="#" className="delete" onClick={deleteTodo}>
+                    Delete
+                </button>
             </div>
         </div>
     )

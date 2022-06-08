@@ -1,0 +1,43 @@
+.card {
+    width: 60vw;
+    height: 6.5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--grey); 
+    margin-top: 2rem; 
+    font-size: 2.5rem;
+    border-radius: .5rem;
+}
+
+.card .checked {
+    background-color: var(--green);
+}
+
+.card .card-content {
+    margin-left: 1rem;
+}
+
+.card .actions button {
+    margin-right: 1rem;
+    width: 8rem;
+    height: 4rem;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: .2rem;
+}
+
+.card .actions button:hover {
+    cursor: pointer;
+    filter: brightness(1.5);
+}
+
+.card .actions .check {
+    background-color: var(--green);
+}
+
+.card .actions .delete {
+    background-color: var(--red);
+}

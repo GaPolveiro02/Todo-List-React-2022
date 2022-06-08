@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Card } from "./components/Card";
+import "./styles/app.css"
 
 export function App() {
   const [todo, setTodo] = useState('');
@@ -25,7 +26,7 @@ export function App() {
   }
   
   return (
-    <div className="App">
+    <div className="container">
       <h1>Todo List</h1>
       <input 
         onChange={e => setTodo(e.target.value)}

@@ -1,6 +1,8 @@
+import "./styles.css"
+
 export function Card(props) {
     const check = (e) => {
-        e.nativeEvent.path[2].className = "card check"
+        e.nativeEvent.path[2].className = "card checked"
     }
 
     const deleteTodo = (e) => {

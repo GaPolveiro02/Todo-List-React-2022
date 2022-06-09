@@ -1,34 +1,56 @@
 .container {
     height: 100vh;
     width: 100vw;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    background-color: var(--dark);
+
+    color: var(--grey-blue);
     font-size: 3.5rem;
+    background-color: var(--dark);
+}
+
+.container h1 {
+    font-size: 7rem;
+    margin-top: 2rem;
+    color: var(--white);
+}
+
+.container strong {
+    color: var(--green);
 }
 
 .container input {
-    width: 25vw;
-    height: 4vh;
+    width: 30vw;
+    height: 5vh;
 
     text-align: center;
 
+    margin-top: 2rem;
     border-radius: .2rem;
+    
     font-size: 2rem;
+    color: var(--white);
+
     background-color: var(--grey);
+    border-bottom: .5rem solid var(--green);
 }
 
-.container header button {
+.container input::placeholder {
+    color: var(--grey-blue);
+}
+
+.container header > button {
     width: 12vw;
     height: 5vh;
 
     font-size: 2rem;
+    color: var(--grey-blue);
 
     margin-top: 2rem;
     background-color: var(--green);
-    cursor: pointer;
 }
 
 .container button:hover {
@@ -38,6 +60,7 @@
 
 .container header {
     height: 30vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,11 +73,13 @@
 
 .container footer {
     height: 5vh;
-    width: 60vw;
+    width: 40vw;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.5rem;
+
+    font-size: 2.4rem;
     margin-bottom: 2rem;
     border-top: .2rem solid var(--green);
 }

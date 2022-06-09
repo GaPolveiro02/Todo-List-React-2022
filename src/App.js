@@ -27,15 +27,24 @@ export function App() {
   
   return (
     <div className="container">
-      <h1>Todo List</h1>
+      <header>
+      <h1>Todo <strong>List</strong></h1>
       <input 
         onChange={e => setTodo(e.target.value)}
         type="text"
         className="input"
+        placeholder="Type a todo..."
       ></input>
       <button onClick={handleAddTodo}>Add</button>
+      </header>
+      
+      <ul>
+        {todoList.map(todo => <li><Card name={todo.name} /></li>)}
+      </ul>
 
-      {todoList.map(todo => <Card name={todo.name} />)}
+      <footer>
+        <p>Made by <a>GaPolveiro02</a></p>
+      </footer>
     </div>
   );
 }

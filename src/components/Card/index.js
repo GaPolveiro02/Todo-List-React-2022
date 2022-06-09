@@ -3,10 +3,11 @@ import "./styles.css"
 export function Card(props) {
     const check = (e) => {
         e.nativeEvent.path[2].className = "card checked"
+        e.nativeEvent.path[0].remove()
     }
 
     const deleteTodo = (e) => {
-        e.nativeEvent.path[2].remove()
+        e.nativeEvent.path[3].remove()
     }
 
     return( 
